@@ -18,5 +18,37 @@
     <ClCompile Include="ConsoleApplication1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Course.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GradeOfCourse.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TeachingClass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CollChinese.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CollMath.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Course.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GradeOfCourse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TeachingClass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CollChinese.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CollMath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

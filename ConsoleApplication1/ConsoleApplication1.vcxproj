@@ -123,10 +123,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CollChinese.cpp" />
+    <ClCompile Include="CollMath.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
+    <ClCompile Include="Course.cpp" />
+    <ClCompile Include="GradeOfCourse.cpp" />
     <ClCompile Include="TeachingClass.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CollChinese.h" />
+    <ClInclude Include="CollMath.h" />
+    <ClInclude Include="Course.h" />
+    <ClInclude Include="GradeOfCourse.h" />
     <ClInclude Include="TeachingClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

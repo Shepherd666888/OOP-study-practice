@@ -1,13 +1,25 @@
 ﻿// ConsoleApplication1.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 #include"TeachingClass.h"
+#include"CollChinese.h"
+#include"CollMath.h"
+#include"Course.h"
+#include"GradeOfCourse.h"
 #include <iostream>
 
 int main()
 {
     TeachingClass tc(1,"sdf","123");
     tc.showInfo();
+    Course* c = new Course("1", "111", "1");
+    tc.setCourse(c);
+    CollChinese* d = new CollChinese("11", "钉钉", "2", "古文", "李同学");
+   std::cout << d->getCourseTitle()<< std::endl;
 
+   CollMath* e = new CollMath("11", "西南科技大学", "2", "古文", "李同学");
+   std::cout << e->getCourseTitle() << std::endl;
+
+   delete c;
 
     std::cout << "Hello World!\n";
 }
