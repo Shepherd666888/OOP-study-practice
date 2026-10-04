@@ -11,4 +11,6 @@ void Course::setCourseTitle(std::string _title) {
 std::string Course::getCourseTitle() {
 	return this->title;
 }
-
+std::string Course::establishCourse() {
+	return this->title;
+}

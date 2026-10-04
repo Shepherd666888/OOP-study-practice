@@ -15,3 +15,6 @@ std::string CollMath::getClasswork() {
 void CollMath::setClasswork(std::string _classwork) {
 	this->classwork = _classwork;
 }
+std::string CollMath::establishCourse() {
+	return this->getCourseTitle();
+}

@@ -12,5 +12,6 @@ public:
     void setLecture(std::string _lecture);
     std::string getTA(); 
     void setTA(std::string _TA);
+    virtual std::string establishCourse() override;
 };
 

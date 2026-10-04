@@ -12,7 +12,7 @@ int main()
     TeachingClass tc(1,"sdf","123");
     tc.showInfo();
     Course* c = new Course("1", "111", "1");
-    tc.setCourse(c);
+    tc.setCourse(c,10);
     CollChinese* d = new CollChinese("11", "钉钉", "2", "古文", "李同学");
    std::cout << d->getCourseTitle()<< std::endl;
 

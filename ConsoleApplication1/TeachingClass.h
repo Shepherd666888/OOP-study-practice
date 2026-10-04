@@ -9,11 +9,11 @@ private:
 	std::string semeter;
 	std::string teachingNo;
 	GradeOfCourse* gradeOfCourse[10];
-	Course* course;
-
+	Course* course[10];
+	int courseNum;
 public:
-	Course* getCourse();
-	void setCourse(Course* course);
+	Course* getCourse(int count);
+	void setCourse(Course* course,int count);
 	int getTeanchingClassID();
 	void setTeanchingClassID(int teachingClassID);
 	std::string getSemeter();

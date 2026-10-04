@@ -15,3 +15,6 @@ std::string CollChinese::getTA(){
 void CollChinese::setTA(std::string _TA){
 	this->TA = _TA;
 }
+std::string CollChinese::establishCourse() {
+	return this->getCourseTitle();
+}

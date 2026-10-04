@@ -32,11 +32,11 @@ TeachingClass::TeachingClass(int t_ClassID, std::string ster, std::string tNo) :
 	teachingClassID(t_ClassID), semeter(ster), teachingNo(tNo) {
 	this->gradeOfCourse[0] = new GradeOfCourse(99,123);
 }
-Course* TeachingClass::getCourse() {
-	return this->course;
+Course* TeachingClass::getCourse(int count) {
+	return this->course[count];
 }
-void TeachingClass::setCourse(Course* course) {
-	this->course = course;
+void TeachingClass::setCourse(Course* course,int count) {
+	this->course[count] = course;
 }
 TeachingClass::~TeachingClass() {
 	delete this->gradeOfCourse[0];

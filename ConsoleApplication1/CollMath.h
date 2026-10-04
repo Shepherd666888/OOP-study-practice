@@ -12,5 +12,6 @@ public:
     void setTA(std::string _TA);
     std::string getClasswork();
     void setClasswork(std::string _classwork);
+    virtual std::string establishCourse() override;
 };
 

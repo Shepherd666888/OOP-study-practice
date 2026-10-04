@@ -11,6 +11,8 @@ public:
 	Course();
 	Course(std::string _courseNo,std::string _title,std::string _semester);
 	void setCourseTitle(std::string _title);
+	virtual ~Course();
 	std::string getCourseTitle();
+	virtual std::string establishCourse();
 };
 
