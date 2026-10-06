@@ -11,15 +11,18 @@ int main()
 {
     TeachingClass tc(1,"sdf","123");
     tc.showInfo();
-    Course* c = new Course("1", "111", "1");
-    tc.setCourse(c,10);
     CollChinese* d = new CollChinese("11", "钉钉", "2", "古文", "李同学");
    std::cout << d->getCourseTitle()<< std::endl;
 
    CollMath* e = new CollMath("11", "西南科技大学", "2", "古文", "李同学");
    std::cout << e->getCourseTitle() << std::endl;
 
-   delete c;
+   Course* p1 = new CollChinese("CH101", "大学语文", "2026秋", "张老师", "TA小李");
+   Course* p2 = new CollMath("MA102", "高等数学", "2026秋", "TA小王", "作业A");
+   std::cout << p1->establishCourse() << std::endl;
+   std::cout << p2->establishCourse() << std::endl;
+   delete p1;
+   delete p2;
 
     std::cout << "Hello World!\n";
 }

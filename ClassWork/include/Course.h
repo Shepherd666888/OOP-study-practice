@@ -13,6 +13,6 @@ public:
 	void setCourseTitle(std::string _title);
 	virtual ~Course();
 	std::string getCourseTitle();
-	virtual std::string establishCourse();
+	virtual std::string establishCourse()=0;
 };
 
