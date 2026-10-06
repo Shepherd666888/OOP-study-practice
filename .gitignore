@@ -361,3 +361,36 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+## Visual Studio cache/options directory
+.vs/
+*.suo
+*.sln.docstates
+
+## Visual Studio project options
+*.vcxproj.user
+
+## Visual Studio build directories (精准排除编译生成目录)
+x64/Debug/
+x64/Release/
+Win32/Debug/
+Win32/Release/
+ipch/
+
+## Compiled Object files
+*.obj
+
+## Executables and Libraries
+*.exe
+*.dll
+*.lib
+*.pdb
+
+## Precompiled Headers
+*.pch
+*.idb
+
+## Visual Studio Solution Files (彻底清除)
+*.sln
+*.vcxproj
+*.vcxproj.filters
