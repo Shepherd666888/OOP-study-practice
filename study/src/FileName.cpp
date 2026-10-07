@@ -1,26 +1,26 @@
 #include<iostream>
 using namespace std;
-class Complex {
-public:
-	double real, image;
-	Complex(double r, double i) {
-		real = r, image = i;
-	}
-	Complex(const Complex & c1) {
-		real = c1.real;
-		image = c1.image;
-		cout << "我被调用了";
-	}
-};
-class Person {
-public:
-	Person() {
-		cout<<"use Person()"<<endl;
-	}
-	~Person() {
-		cout<<"use ~Person()"<<endl;
-	}
-};
+//class Complex {
+//public:
+//	double real, image;
+//	Complex(double r, double i) {
+//		real = r, image = i;
+//	}
+//	Complex(const Complex & c1) {
+//		real = c1.real;
+//		image = c1.image;
+//		cout << "我被调用了";
+//	}
+//};
+//class Person {
+//public:
+//	Person() {
+//		cout<<"use Person()"<<endl;
+//	}
+//	~Person() {
+//		cout<<"use ~Person()"<<endl;
+//	}
+//};
 //class Student {
 //public:
 //	Student() {
@@ -161,33 +161,34 @@ public:
 
 
 //友元类
-class Teacher;
-class Student{
-private:
-	string sname;
-	int sage;
-public:
-	Student(string _sname, int _sage) {
-		this->sname = _sname;
-		this->sage = _sage;
-	}
-	void stu_print(Teacher& t);
-};
-class Teacher {
-private: 
-	string tname;
-	int tage;
-public:
-	friend class Student;
-	Teacher(string _tname, int _tage) {
-		this->tname = _tname;
-		this->tage = _tage;
-	}
-};
-void Student::stu_print(Teacher &t) {
-	cout << this->sname<<endl;
-	cout << t.tname;
-}
+//class Teacher;
+//class Student{
+//private:
+//	string sname;
+//	int sage;
+//public:
+//	Student(string _sname, int _sage) {
+//		this->sname = _sname;
+//		this->sage = _sage;
+//	}
+//	void stu_print(Teacher& t);
+//};
+//class Teacher {
+//private: 
+//	string tname;
+//	int tage;
+//public:
+//	friend class Student;
+//	Teacher(string _tname, int _tage) {
+//		this->tname = _tname;
+//		this->tage = _tage;
+//	}
+//};
+//void Student::stu_print(Teacher &t) {
+//	cout << this->sname<<endl;
+//	cout << t.tname;
+//}
+
 
 //运算符重载
 //不能重载的运算符，.(类属关系运算符)，：：(域运算符)，sizeof(取类型长度运算符),?:(条件运算符)，.*(成员指针运算符)，#(编译预处理符号)
@@ -202,10 +203,98 @@ void Student::stu_print(Teacher &t) {
 //}
 
 
+////继承与派生基本一样 class 子类::父类
+//class Animal {
+//public:
+//	int age;
+//	string name;
+//public:
+//	Animal(){}
+//	Animal(int _age, string _name) {
+//		this->age = _age;
+//		this->name = _name;
+//	}
+//	void show() {
+//		cout << "name: " << this->name << " age: " << this->age << endl;
+//	}
+//};
+//class Dog :public Animal {
+//public:
+//	string sex;
+//public:
+//	Dog(){}
+//	Dog(int _age, string _name, string _sex) {
+//		this->age = _age;
+//		this->name = _name;
+//		this->sex = _sex;
+//	}
+//
+//};
+
+
+//public,protected,private，三种继承方式
+class Person {
+public:
+	string name;
+protected:
+	int age;
+private:
+	string sex;
+public:
+	void setName(string _name) {
+		this->name = _name;
+	}
+	void setAge(int _age) {
+		this->age = _age;
+	}
+	void setSex(string _sex) {
+		this->sex=_sex;
+	}
+	void show() {
+		cout << "name:" << this->name << " " << "age:" << this->age << " " << "sex:" << this->sex;
+	}
+};
+
+//class Student:public Person {
+//public:
+//	/*void show() {
+//		cout << "name:" << this->name << " " << "age:" << this->age << " " << "sex:" << this->sex;
+//		sex为私有，子类不可使用；
+//	}*/
+//
+//};
+
+//若为私有继承，则父类在子类中皆为私有，无法使用对象访问，private成员不可使用
+//class Student :private Person {
+//public:
+//
+//};
+
+//若为私有继承，则父类在子类中除了private,皆为protected属性，无法使用对象访问
+class Student :protected Person {
+public:
+	/*void show() {
+		cout << "name:" << this->name << " " << "age:" << this->age << " " << "sex:" << this->sex;
+		sex为私有，不可使用*/
+};
+
 int main() {
-	Student s1("张三", 20);
+
+
+	/*Student s1;
+	s1.name;
+	s1.setName("ww");
+	s1.setAge(11);
+	s1.setSex("女性");
+	s1.show();*/
+
+
+	/*Dog d1(6, "ww", "雄性");
+	d1.show();*/
+
+	/*Student s1("张三", 20);
 	Teacher t1("李四", 30);
-	s1.stu_print(t1);
+	s1.stu_print(t1);*/
 
 
 
